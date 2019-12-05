@@ -75,3 +75,10 @@ body {
   padding: 5px 10px;
   background-color: lightskyblue;
 }
+
+@media (max-width: 768px) {
+  .saved-list,
+  .save-wrapper {
+    width: 100%;
+  }
+}
