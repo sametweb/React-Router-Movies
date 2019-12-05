@@ -48,10 +48,12 @@ body {
   margin: 0 10px;
 }
 .saved-active {
-  color: blue;
+  background-color: blue;
+  color: white;
   border: 1px solid grey;
   padding: 5px;
 }
+
 .save-wrapper {
   position: relative;
   width: 75%;
