@@ -9,14 +9,19 @@ const App = () => {
   const [savedList, setSavedList] = useState([]);
 
   const addToSavedList = movie => {
-    setSavedList([...savedList, movie]);
+    savedList.filter(savedMovie => savedMovie.id === movie.id).length > 0
+      ? alert("This Movie is in the list already")
+      : setSavedList([...savedList, movie]);
   };
 
   return (
     <div>
       <SavedList list={savedList} />
       <Route exact path="/" component={MovieList} />
-      <Route path="/movies/:id" component={Movie} />
+      <Route
+        path="/movies/:id"
+        render={props => <Movie {...props} addToSavedList={addToSavedList} />}
+      />
     </div>
   );
 };
