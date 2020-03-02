@@ -1,3 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -34,6 +47,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 14px;
 }
 
 .saved-list h3 {
@@ -44,10 +58,12 @@ body {
   margin: 0 10px;
 }
 .saved-active {
-  color: blue;
-  border: 1px solid grey;
-  padding: 5px;
+  background-color: dodgerblue;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
 }
+
 .save-wrapper {
   position: relative;
   width: 75%;
@@ -57,16 +73,27 @@ body {
   position: absolute;
   top: 25px;
   right: 25px;
-  border: 1px solid grey;
   padding: 5px 10px;
-  background-color: lightseagreen;
+  cursor: pointer;
+  background-color: dodgerblue;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 14px;
 }
 .save-button:hover {
-  background-color: green;
+  background-color: slategrey;
   color: white;
 }
 
 .home-button {
   padding: 5px 10px;
   background-color: lightskyblue;
+}
+
+@media (max-width: 768px) {
+  .saved-list,
+  .save-wrapper {
+    width: 100%;
+  }
 }
